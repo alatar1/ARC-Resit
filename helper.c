@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <helper.h>
 #include <time.h>
 
 //besion d'une fonction qui sélectionne
@@ -10,50 +9,62 @@
 //et qui vérifie l'input utilisateur avec
 //chaque lettre du mot.
 
+//génère un nombre aléatoire
+int rdmNumber()
+{
+    srand(time(NULL));
+    int r = rand();
+}
+
+//sélectionne un nombre aléatoire provenant d'une liste
+char pickWord(int num, char* listOfWords){
+    char word;
+    word = listOfWords[num];
+    return word;
+}
+
 // récupère l'entrée du joueur
-char getUserInput(char messageToPrint){
-    char userInput;,
-    printf(messageToPrint);
+char getUserInput(char messageToPrint)
+{
+    char userInput;
+    printf("%s",messageToPrint);
     scanf("%c", userInput);
     return (userInput);
 }
 
 //Renvoie 1 si le joueur a deviner la bonne lettre
 //Renvoie 0 si le joueur s'est trompé
-int Guess(char userInput, /*randomLetter*/){
+int Guess(char userInput /*randomLetter*/)
+{
     int resultGuess;
-    if(userInput == /*randomLetter*/)
+    if (userInput/*== randomLetter*/)
     {
         resultGuess = 1;
     }
-    else 
+    else
     {
         resultGuess = 0;
     }
-return (resultGuess);
-    
+    return (resultGuess);
 }
 
 //fonction qui gère la "vie" du joueur
 //counter est décrémenté a chaque erreur
 //si counter ==0, la partie est ternminée
-void HPCounter(char difficulty){
+int HPCounter(char difficulty)
+{
     int counter;
- switch (difficulty)
- {
- case "easy":
+if(difficulty == "easy")
+{
     counter = 10;
-     break;
-case "medium" :
-        counter = 8;
-    break;
-case "hard":
+}
+else if (difficulty == "hard")
+{
     counter = 5;
-    break;
- default:
+}
+else
+{
     counter = 8;
-     break;
-
-    // a completer
- }   
+}
+return counter;
 }

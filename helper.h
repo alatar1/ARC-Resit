@@ -1,8 +1,14 @@
 //fichier incluant chaque prototype
 //de chaque fonction de helper.c
 
-char getUserInput(char messageToPrint){};
+char getUserInput(char messageToPrint);
 
-getUserInput(){};
+int rdmNumber();
 
-HPCounter(char difficulty){};
+char pickWord(int num, char* listOfWords);
+
+char getUserInput(char messageToPrint);
+
+int Guess(char userInput);
+
+int HPCounter(char difficulty);
