@@ -14,11 +14,12 @@ int rdmNumber()
 {
     srand(time(NULL));
     int r = rand();
+    return r;
 }
 
 //sélectionne un nombre aléatoire provenant d'une liste
 char pickWord(int num, char* listOfWords){
-    char word;
+    char* word;
     word = listOfWords[num];
     return word;
 }

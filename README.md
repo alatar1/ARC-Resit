@@ -1,4 +1,5 @@
 ARC-Resit
+
 /// Resit subject ///
 
-HangedMan runing on the SEGA Genesis!
+Hangman runing on the SEGA Genesis! Currently being build ...
