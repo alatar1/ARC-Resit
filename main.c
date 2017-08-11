@@ -4,13 +4,17 @@
 #include "helper.h"
 
 //déclaration des variables et des constantes;
-char* listOfWords[][15] = {"jambon", "merlot", "melon", "saucisse", "broccoli"};
-int n = rdmNumber();
+
+ char *listOfWords[] = {"jambon", "merlot", "melon", "saucisse", "broccoli"};
+ char *my_array[] = {"eenie","meenie","miney"};
+//int n = rdmNumber();
+int n = 0;
+char theWord [];
 
 //boucle de jeu
 void main(int argc, char const *argv[])
 {
-   char* theWord = pickWord(int n, char* listOfWords);
+    theWord = pickWord(n, &listOfWords);
     printf("Hangman being build ...");
     printf("n value is : %d", n);
     printf("the word is : %s", theWord);

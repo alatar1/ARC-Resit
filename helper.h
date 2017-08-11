@@ -5,7 +5,7 @@ char getUserInput(char messageToPrint);
 
 int rdmNumber();
 
-char pickWord(int num, char* listOfWords);
+char pickWord(int num, char *listOfWords);
 
 char getUserInput(char messageToPrint);
 

@@ -18,14 +18,14 @@ int rdmNumber()
 }
 
 //sélectionne un nombre aléatoire provenant d'une liste
-char pickWord(int num, char* listOfWords){
-    char* word;
+char pickWord(int num, char *listOfWords[]){
+    char word;
     word = listOfWords[num];
     return word;
 }
 
 // récupère l'entrée du joueur
-char getUserInput(char messageToPrint)
+char getUserInput(char messageToPrint[])
 {
     char userInput;
     printf("%s",messageToPrint);
@@ -35,7 +35,7 @@ char getUserInput(char messageToPrint)
 
 //Renvoie 1 si le joueur a deviner la bonne lettre
 //Renvoie 0 si le joueur s'est trompé
-int Guess(char userInput /*randomLetter*/)
+int Guess(char *userInput /*randomLetter*/)
 {
     int resultGuess;
     if (userInput/*== randomLetter*/)
@@ -52,7 +52,7 @@ int Guess(char userInput /*randomLetter*/)
 //fonction qui gère la "vie" du joueur
 //counter est décrémenté a chaque erreur
 //si counter ==0, la partie est ternminée
-int HPCounter(char difficulty)
+int HPCounter(char *difficulty[])
 {
     int counter;
 if(difficulty == "easy")
