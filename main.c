@@ -1,22 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include<time.h>
-#include "helper.h"
+#include <genesis.h>
 
-//déclaration des variables et des constantes;
-
- char *listOfWords[] = {"jambon", "merlot", "melon", "saucisse", "broccoli"};
- char *my_array[] = {"eenie","meenie","miney"};
-//int n = rdmNumber();
-int n = 0;
-char theWord [];
-
-//boucle de jeu
-void main(int argc, char const *argv[])
+int main()
 {
-    theWord = pickWord(n, &listOfWords);
-    printf("Hangman being build ...");
-    printf("n value is : %d", n);
-    printf("the word is : %s", theWord);
-    getchar();
+	VDP_drawText("Hello Genny World!", 10, 13);
+
+	while(1)
+	{
+		//read input
+		//move sprite
+		//update score
+		//draw current screen (logo, start screen, settings, game, gameover, credits...)
+
+		//wait for screen refresh
+		VDP_waitVSync();
+	}
+	return (0);
 }
+
+
