@@ -1,1 +1,5 @@
-%GDK_WIN%\bin\make -f %GDK_WIN%\makefile.gen
+e:
+cd e:\git
+bin\make -f makefile.gen
+
+pause
